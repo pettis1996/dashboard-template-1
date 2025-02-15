@@ -1,7 +1,10 @@
 import { StatCard } from "@/components/stat-card"
 import { PageViewsChart } from "@/components/page-views-chart"
 import { RecentCustomersTable } from "@/components/recent-customers-table"
+import { RecentActivities } from "@/components/recent-activities"
+import { TasksList } from "@/components/tasks-list"
 import { BarChart3, Users, ArrowUpRight, DollarSign } from "lucide-react"
+import { SalesFunnelChart } from "@/components/sales-funnel-chart"
 
 export default function Dashboard() {
   return (
@@ -16,6 +19,11 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <PageViewsChart />
         <RecentCustomersTable />
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <RecentActivities />
+        <SalesFunnelChart />
+        <TasksList />
       </div>
     </div>
   )
