@@ -2,12 +2,14 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { BarChart3, Users, FolderKanban, Settings } from "lucide-react"
+import { BarChart3, Users, FolderKanban, Settings, PieChart, Upload } from "lucide-react"
 
 const navItems = [
     { icon: BarChart3, label: "Dashboard", href: "/" },
     { icon: Users, label: "Customers", href: "/customers" },
     { icon: FolderKanban, label: "Projects", href: "/projects" },
+    { icon: PieChart, label: "Analytics", href: "/analytics" },
+    { icon: Upload, label: "File Manager", href: "/file-manager" },
     { icon: Settings, label: "Settings", href: "/settings" },
 ]
 
