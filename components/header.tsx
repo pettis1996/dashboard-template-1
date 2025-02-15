@@ -1,6 +1,6 @@
 "use client"
 
-import { Moon, Search, Sun, User } from "lucide-react"
+import { Moon, Sun, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import {
@@ -14,10 +14,14 @@ import {
 import { useTheme } from "next-themes"
 import { NotificationsDropdown } from "@/components/notifications-dropdown"
 import { useEffect, useState } from "react"
+import { ProfileModal } from "@/components/profile-modal"
+import { SettingsModal } from "@/components/settings-modal"
 
 export function Header() {
     const { setTheme, theme } = useTheme()
     const [mounted, setMounted] = useState(false)
+    const [isProfileModalOpen, setIsProfileModalOpen] = useState(false)
+    const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
 
     useEffect(() => {
         setMounted(true)
@@ -58,12 +62,14 @@ export function Header() {
                     <DropdownMenuContent align="end">
                         <DropdownMenuLabel>My Account</DropdownMenuLabel>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem>Profile</DropdownMenuItem>
-                        <DropdownMenuItem>Settings</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setIsProfileModalOpen(true)}>Profile</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setIsSettingsModalOpen(true)}>Settings</DropdownMenuItem>
                         <DropdownMenuItem>Logout</DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
+            <ProfileModal isOpen={isProfileModalOpen} onClose={() => setIsProfileModalOpen(false)} />
+            <SettingsModal isOpen={isSettingsModalOpen} onClose={() => setIsSettingsModalOpen(false)} />
         </header>
     )
 }
