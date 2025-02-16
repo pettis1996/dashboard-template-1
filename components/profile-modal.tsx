@@ -26,7 +26,7 @@ export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-        // Handle profile update logic here
+        
         console.log("Profile updated:", { name, email })
         onClose()
     }

@@ -15,9 +15,9 @@ export function AddProjectForm() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-        // Handle form submission here
+
         console.log({ name, client, status })
-        // Reset form
+        
         setName("")
         setClient("")
         setStatus("planning")

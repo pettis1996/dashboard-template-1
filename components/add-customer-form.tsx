@@ -15,9 +15,9 @@ export function AddCustomerForm() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-        // Handle form submission here
+        
         console.log({ name, email, status })
-        // Reset form
+        
         setName("")
         setEmail("")
         setStatus("active")

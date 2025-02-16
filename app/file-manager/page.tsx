@@ -1,7 +1,4 @@
 "use client"
-
-import type React from "react"
-
 import { useState } from "react"
 import { Upload, File, Trash } from "lucide-react"
 import { Button } from "@/components/ui/button"

@@ -27,7 +27,7 @@ export function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-        // Handle settings update logic here
+        
         console.log("Settings updated:", { emailNotifications, language })
         onClose()
     }
