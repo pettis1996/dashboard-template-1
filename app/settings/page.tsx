@@ -60,11 +60,11 @@ export default function SettingsPage() {
                     </div>
                     <div>
                         <Label htmlFor="email" className="text-white">
-                            Role
+                            Permissions
                         </Label>
                         <Collapsible>
                             <CollapsibleTrigger className="flex justify-center items-center gap-2">
-                                Edit Permissions <ListCollapse size={18} />
+                                <ListCollapse size={18} /> Edit Permissions 
                             </CollapsibleTrigger>
                             <CollapsibleContent className="overflow-y-auto px-5 pt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                                 {permissions.map((perm) => (
