@@ -9,6 +9,8 @@ const data = [
     { name: "Apr", value: 278 },
     { name: "May", value: 189 },
     { name: "Jun", value: 239 },
+    { name: "Jul", value: 280 },
+    { name: "Aug", value: 200 },
 ]
 
 export function PageViewsChart() {
