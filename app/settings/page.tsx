@@ -89,9 +89,14 @@ export default function SettingsPage() {
                             </Label>
                         </div>
                     </div>
-                    <Button type="submit" className="w-full">
-                        Save Settings
-                    </Button>
+                    <div className="space-x-5 flex justify-end w-full">
+                        <Button type="submit">
+                            Save Settings
+                        </Button>
+                        <Button type="button" className="bg-red-600 text-white" onClick={() => console.log("Reset settings")}>
+                            Reset Settings
+                        </Button>
+                    </div>
                 </form>
             </div>
         </div>
